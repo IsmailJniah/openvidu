@@ -8,20 +8,19 @@ on:
   workflow_dispatch: //hacer que corra el pipeline manualmente
 
 jobs:
-  openvidu-test-e2e:
-    name: test E2E
+  node-docker:
+    runs-on: ubuntu-latest
     container: 
-      image: openvidu-test-e2e/docker/
+      image: openvidu/openvidu-test-e2e:focal
       options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0 ' 
     steps:
-    -job: Build 1
-      -run: |
-          cd openvidu/openvidu-browser
-          npm install --quiet --unsafe-perm
-          npm r un build --quiet
-          npm pack --quiet
-          cp openvidu-browser-*.tgz /opt/openvidu
-        
+      - name:  Build 1
+      run: |
+        cd openvidu/openvidu-browser
+        npm install --quiet --unsafe-perm
+        npm r un build --quiet
+        npm pack --quiet
+        cp openvidu-browser-*.tgz /opt/openvidu
 
 
 
