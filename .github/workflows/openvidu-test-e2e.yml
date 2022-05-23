@@ -1,7 +1,7 @@
 name: openvidu-test E2E
 
 on:
-  workflow_dispatch:
+ workflow_dispatch:
 
 jobs:
   node-docker:
