@@ -1,10 +1,6 @@
 name: openvidu-test E2E
 
 on:
-  push:
-    paths:
-      - 'openvidu-test-e2e/**'
-
   workflow_dispatch: //hacer que corra el pipeline manualmente
 
 jobs:
