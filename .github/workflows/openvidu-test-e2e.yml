@@ -1,7 +1,7 @@
 name: openvidu-test E2E
 
 on:
-  workflow_dispatch: //hacer que corra el pipeline manualmente
+  workflow_dispatch:
 
 jobs:
   node-docker:
