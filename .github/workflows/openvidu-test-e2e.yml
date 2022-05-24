@@ -11,6 +11,7 @@ jobs:
     steps:
        - name:  Build 1
          run: |
+           sudo -i 
            cd openvidu/openvidu-browser
            npm install --quiet --unsafe-perm
            npm r un build --quiet
