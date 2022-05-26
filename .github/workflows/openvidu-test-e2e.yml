@@ -10,13 +10,7 @@ jobs:
       options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0 ' 
     steps:
        - name:  Build 1
-         run: |
-           ls
-           cd openvidu-browser
-           npm install --quiet --unsafe-perm
-           npm r un build --quiet
-           npm pack --quiet
-           cp openvidu-browser-*.tgz /opt/openvidu
+         run: ls -lart
 
 
 
