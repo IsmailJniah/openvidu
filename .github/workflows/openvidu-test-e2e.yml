@@ -11,6 +11,7 @@ jobs:
     steps:
        - name:  Build 1
          run: |
+          cd ..
           ls -lart
           pwd
 
