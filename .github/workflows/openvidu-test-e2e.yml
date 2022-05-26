@@ -10,10 +10,10 @@ jobs:
        - name: Construcción de la Imagen openvidu-test-e2e
          run: |
           cd openvidu-test-e2e/docker
-          docker build -t openvidu . 
+          docker build -t openvidu . --privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0
        - name: Run image
          run: |
-          docker run openvidu:latest --privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0
+          docker run -it openvidu:latest 
           ls -lart
           cd openvidu/openvidu-browser
            
