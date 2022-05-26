@@ -12,7 +12,7 @@ jobs:
           cd openvidu-test-e2e/docker
           ls -lart
           docker build -t openvidu .
-          docker run openvidu
+          docker run -i -t openvidu:latest
           ls -lart
           cd openvidu/openvidu-browser
 
