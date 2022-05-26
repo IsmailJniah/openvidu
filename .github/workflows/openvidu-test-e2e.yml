@@ -10,8 +10,8 @@ jobs:
        - name:  Build 1
          run: |
           ls -lart
-          docker build openvidu/openvidu-test-e2e/docker
-          docker run  -it openvidu/openvidu-test-e2e/docker
+          docker build /openvidu-test-e2e/docker
+          docker run  -it /openvidu-test-e2e/docker
           ls -lart
           cd openvidu/openvidu-browser
 
