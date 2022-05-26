@@ -12,7 +12,8 @@ jobs:
        - name:  Build 1
          run: |
            chmod a+rx openvidu/openvidu-browser
-           cd openvidu/openvidu-browser
+           ls
+           cd openvidu-browser
            npm install --quiet --unsafe-perm
            npm r un build --quiet
            npm pack --quiet
