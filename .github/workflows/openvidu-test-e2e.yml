@@ -10,7 +10,7 @@ jobs:
       options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0'
       volumes:
         - /openvidu/test-layouts/:/opt/openvidu-cache/test-layouts
-        - /openvidu/:/opt/openvidu
+        - openvidu/:/opt/openvidu
         - /dev/shm:/dev/shm
         - /root/.m2:/opt/openvidu-cache/.m2
     steps:
