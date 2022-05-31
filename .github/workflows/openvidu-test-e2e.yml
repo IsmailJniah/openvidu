@@ -16,12 +16,8 @@ jobs:
     steps:
        - name:  Build 1
          run: |
-           ls -lart
-           cd ..
-           cd ..
-           cd ..
-           ls -lart 
            cd /opt
+           ls -lart
            cd /opt/openvidu/openvidu-browser
            npm install --quiet --unsafe-perm
            npm r un build --quiet
