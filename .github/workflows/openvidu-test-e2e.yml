@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: 'openvidu/openvidu-test-e2e:focal'
-      options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0 -v /var/run/docker.sock:/var/run/docker.sock:rw -v /dev/shm:/dev/shm -v /opt/openvidu:./openvidu -v /opt/openvidu-cache/test-layouts:/opt/openvidu/test-layouts -v /opt/openvidu-cache/.m2:/root/.m2 ' 
+      options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0 -v /var/run/docker.sock:/var/run/docker.sock:rw -v /dev/shm:/dev/shm -v /opt/openvidu:/openvidu -v /opt/openvidu-cache/test-layouts:/opt/openvidu/test-layouts -v /opt/openvidu-cache/.m2:/root/.m2 ' 
     steps:
        - name:  Build 1
          run: |
