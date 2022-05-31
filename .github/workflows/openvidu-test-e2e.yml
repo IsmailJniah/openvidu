@@ -11,7 +11,6 @@ jobs:
       volumes:
         - /openvidu/test-layouts/:/opt/openvidu-cache/test-layouts
         - openvidu/:/opt/openvidu
-        - openvidu
         - /dev/shm:/dev/shm
         - /root/.m2:/opt/openvidu-cache/.m2
     steps:
