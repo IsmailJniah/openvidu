@@ -9,10 +9,10 @@ jobs:
       image: 'openvidu/openvidu-test-e2e:focal'
       options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0'
       volumes:
-        - /opt/openvidu-cache/test-layouts:/openvidu/test-layouts
-        - /opt/openvidu:/openvidu:rw
-        - /dev/shm:/dev/shm 
-        - /opt/openvidu-cache/.m2:/root/.m2 
+        - /openvidu/test-layouts:/opt/openvidu-cache/test-layouts
+        - /openvidu:/opt/openvidu
+        - /dev/shm:/dev/shm
+        - /root/.m2:/opt/openvidu-cache/.m2
     steps:
        - name:  Build 1
          run: |
