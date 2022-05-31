@@ -9,7 +9,7 @@ jobs:
       image: 'openvidu/openvidu-test-e2e:focal'
       options: '--privileged -p 4200:4200 -p 4443:4443 -p 4114:4114 -u root -e MY_UID=0'
       volumes:
-        - /openvidu :/opt/openvidu
+        - /openvidu/. :/opt/openvidu
     steps:
        - name:  Build 1
          run: |
